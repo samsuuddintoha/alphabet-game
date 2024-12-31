@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alphabet Clash Pro</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Custom Css -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header></header>
+  <main class="bg-black min-h-screen bg-[url('images/background.png')] bg-no-repeat bg-center">
+    <!-- Home -->
+    <section id="home-screen" class="min-h-screen flex items-center justify-center text-center text-white">
+      <div class="space-y-10">
+        <h2 class="text-9xl font-anton uppercase">ALPHABET CLASH</h2>
+        <p class="text-2xl">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
+        <button onclick="play()" class="border px-8 py-3 bg-white text-black rounded-lg text-2xl font-bold">Play Now</button>
+      </div>
+    </section>
+
+    <!-- Playground -->
+     <section id="playground" class="min-h-screen flex items-center justify-center text-center text-white hidden">
+      <div class="space-y-16">
+        <!-- Display Screen -->
+        <div>
+          <div class="w-[1070px] h-[360px] bg-[#ffffffcc] backdrop-blur-sm border-[14px] rounded-2xl border-[#2F2941] flex items-center justify-center relative">
+            <div class="flex justify-center absolute top-[-12px]">
+              <p class="text-2xl text-white bg-[#2F2941] py-2 px-5 rounded-b-xl">Don't watch keyboard  while playing...</p>
+            </div>
+            <p id="current-alphabet" class="text-black text-9xl font-bold">Y</p>
+          </div>
+        </div>
+        <!-- Keyboard Layout -->
+        <div>
+          <div class="my-1 flex w-full justify-center gap-1">
+            <kbd id="q" class="kbd">q</kbd>
+            <kbd id="w" class="kbd">w</kbd>
+            <kbd id="e" class="kbd">e</kbd>
+            <kbd id="r" class="kbd">r</kbd>
+            <kbd id="t" class="kbd">t</kbd>
+            <kbd id="y" class="kbd">y</kbd>
+            <kbd id="u" class="kbd">u</kbd>
+            <kbd id="i" class="kbd">i</kbd>
+            <kbd id="o" class="kbd">o</kbd>
+            <kbd id="p" class="kbd">p</kbd>
+          </div>
+          <div class="my-1 flex w-full justify-center gap-1">
+            <kbd id="a" class="kbd">a</kbd>
+            <kbd id="s" class="kbd">s</kbd>
+            <kbd id="d" class="kbd">d</kbd>
+            <kbd id="f" class="kbd">f</kbd>
+            <kbd id="g" class="kbd">g</kbd>
+            <kbd id="h" class="kbd">h</kbd>
+            <kbd id="j" class="kbd">j</kbd>
+            <kbd id="k" class="kbd">k</kbd>
+            <kbd id="l" class="kbd">l</kbd>
+          </div>
+          <div class="my-1 flex w-full justify-center gap-1">
+            <kbd id="z" class="kbd">z</kbd>
+            <kbd id="x" class="kbd">x</kbd>
+            <kbd id="c" class="kbd">c</kbd>
+            <kbd id="v" class="kbd">v</kbd>
+            <kbd id="b" class="kbd">b</kbd>
+            <kbd id="n" class="kbd">n</kbd>
+            <kbd id="m" class="kbd">m</kbd>
+            <kbd id="/" class="kbd">/</kbd>
+          </div>
+        </div>
+        <!-- Buttons -->
+        <div class="flex justify-between">
+          <button class="flex gap-2 items-center text-white bg-[#894189] px-10 py-3 rounded-full">Life <img src="images/heart.svg" alt="">
+           <span id="current-life" class="text-2xl font-bold">01</span></button>
+          <button class="flex gap-2 items-center text-white bg-[#360490] px-10 py-3 rounded-full">Score <img src="images/doller.svg" alt="" class="mr-1"><span id="current-score" class="text-2xl font-bold">01</span></button>
+        </div>
+      </div>
+     </section>
+
+    <!-- Score -->
+     <section id="score" class="score min-h-screen flex items-center justify-center text-center text-white hidden">
+      <div class="border bg-gradient-to-r from-[#FFFFFF50] to-[#FFFFFF01] rounded-xl p-16 space-y-5">
+        <h3 class="text-8xl"><span class="font-bold">Score</span> : <span id="total-score">0</span></h3>
+        <button onclick="play()" class="border px-8 py-3 bg-white text-black rounded-lg text-2xl font-bold">Play Now</button>
+        <p class="text-2xl">Practice will make you Pro</p>
+      </div>
+     </section>
+  </main>
+  <footer></footer>
+
+  <!-- Script Js -->
+  <script src="js/utility.js"></script>
+  <script src="js/gameScript.js"></script>
+</body>
+</html>
